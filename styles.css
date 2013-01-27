@@ -1,4 +1,6 @@
 /* why don't border width and color work? */
+/* why is my bottom nav messed up? */
+/* i'm not clear on the difference between class and id */
 
 
 @font-face {
@@ -6,8 +8,8 @@
 }
 
 div {
-	height: 300px;
-	width: 500px;
+	/* height: 300px;
+	width: 500px;*/
 	min-width: 200px;
 	max-width: 500px;
 	background-color: DarkCyan;
@@ -15,6 +17,23 @@ div {
 	border-color: black;
 	}
 
+div.column1{
+	width: 300px;
+	float: left;
+	margin: 10px;
+	}
+
+div.column2{
+	width: 300px;
+	float: left;
+	margin: 10px;
+	}
+
+div.column3{
+	width: 300px;
+	float: left;
+	margin: 10px;
+	}		
 
 body {
 	font-family: arial;
@@ -26,6 +45,11 @@ h1 {
 	font-family: 'Roboto Condensed', sans-serif;
 	background-color: DeepSkyBlue;
 	padding: 10px;
+	position: fixed;
+		top: 0px;
+		left: 0px;
+		margin: 0px;
+		width: 100%;
 	}
 
 h2 {
@@ -33,6 +57,7 @@ h2 {
 	border-width: thick;
 	border-color: white;
 	padding: 10px;
+	margin: 1px;
 	}
 
 p {
@@ -41,7 +66,17 @@ p {
 	border-width: thick;
 	border-color: black;
 	padding: 10px;
+	margin: 2px;
 	}
+
+/*
+p.note {
+	background-color: Chocolate;
+	position: relative;
+		top: 10px;
+		left: 100px;
+	}	
+*/
 
 nav {
 	color: rgb(100,100,100);
@@ -65,3 +100,4 @@ li {
 	display: inline;
 	margin-right: 10px;
 	}		
+	
