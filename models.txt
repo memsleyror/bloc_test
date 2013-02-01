@@ -1,0 +1,45 @@
+
+
+Users
+	user_id 		integer
+	first_name 		string
+	last_name 		string
+	password 		password
+	fk: role_id 	integer
+	email			string
+	profile_pic		tbd (:picture, :binary, :limit => 2.megabytes)
+
+	has_many posts
+	has_many comments
+	belongs_to role
+
+Roles
+	role_id				integer
+	role_name			string
+	role_description	string
+
+	has_many :users
+
+Posts
+	title				string
+	post_date			date
+	post_text			text
+	post_pic			tbd (:picture, :binary, :limit => 2.megabytes)
+	fk: user_id			integer
+	fk: user_comment_id	integer
+
+	belongs_to :user
+	has_many comments
+
+Comments
+	user_comment_id		integer
+	user_comment 		text
+	fk: user_id			integer
+	fk: post_id			integer
+
+	belongs_to :user
+	belongs_to :post
+
+
+	
+	ProfilePics: img, imageable_id, imageable_type  
